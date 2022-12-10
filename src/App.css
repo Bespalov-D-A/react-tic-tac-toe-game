@@ -1,9 +1,14 @@
-.App {
-  text-align: center;
+
+.app {
+  display: flex;
+  flex-flow:row wrap;
+  height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -13,16 +18,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;
@@ -35,4 +31,50 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.boxValue {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  grid-gap: 2px;
+}
+
+.boxValue > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: #000;
+  background-color: #fff;
+}
+
+.right-side {
+  width: 400px;
+  padding-top: 26px;
+  padding-left: 24px;
+  color: #282c34;
+  background: aqua;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-grow: 1;
+}
+
+.x {
+  color: red;
+}
+
+.o {
+  color: blue;
 }
