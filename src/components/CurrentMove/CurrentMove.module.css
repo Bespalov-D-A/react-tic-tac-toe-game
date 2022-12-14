@@ -1,0 +1,27 @@
+.current-move {
+  position: relative;
+  display: flex;
+  padding: 0 24px;
+  align-items: center;
+  height: 60px;
+  background: #282c34;
+  color: #fefefe;
+}
+
+.current-move.finish {
+   justify-content: center;
+}
+
+.current-move > :last-child {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   right: 0;
+   top: 0;
+   width: 54px;
+   height: 60px;
+   font-size: 56px;
+   font-weight: bold;
+   background: #fefefe;
+}

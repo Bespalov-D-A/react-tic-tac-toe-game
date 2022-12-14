@@ -1,0 +1,8 @@
+.new-game {
+  font-size: 34px;
+  cursor: pointer;
+}
+
+.new-game:hover {
+  color: indigo;
+}

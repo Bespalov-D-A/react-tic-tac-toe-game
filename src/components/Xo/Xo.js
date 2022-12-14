@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import Message from "../Message/Message";
+import NewGame from "../NewGame/NewGame";
 import XoItem from "../XoItem/XoItem";
+import s from "./Xo.module.css";
 
 const defaultArr = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
@@ -14,10 +17,10 @@ const data = [
   [3, 5, 7],
 ];
 
-  const x = 1;
-  const o = 2;
+const x = 1;
+const o = 2;
 
-const Xo = ({finish, setFinish, player, setPlayer}) => {
+const Xo = ({ finish, setFinish, player, setPlayer }) => {
   const [arr, setArr] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const [msg, setMsg] = useState("");
   const [draw, setDraw] = useState(false);
@@ -89,27 +92,18 @@ const Xo = ({finish, setFinish, player, setPlayer}) => {
   };
 
   return (
-    <div
-      style={{
-        width: "200px",
-        display: "flex",
-        flexFlow: "column wrap",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <span>{msg}</span>
-      <div className="boxValue">{getInputs(arr)}</div>
-      <span
-        onClick={() => {
-          setFinish(false);
-          setArr(defaultArr);
-          setMsg("");
-        }}
-      >
-        new game
-      </span>
-    </div>
+    <>
+      <Message msg={msg} />
+      <div className={s.xo}>
+        <div className="boxValue">{getInputs(arr)}</div>
+      </div>
+      <NewGame
+        setArr={setArr}
+        setFinish={setFinish}
+        setMsg={setMsg}
+        defaultArr={defaultArr}
+      />
+    </>
   );
 };
 

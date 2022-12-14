@@ -1,0 +1,7 @@
+.xo {
+  display: flex;
+  flexflow: column wrap;
+  alignitems: center;
+  justifycontent: center;
+  margin-bottom: 24px;
+}
