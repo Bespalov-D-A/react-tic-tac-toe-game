@@ -28,7 +28,6 @@ const Xo = ({ finish, setFinish, player, setPlayer }) => {
   const equalNum = (one, two, three) => {
     let bool = false;
     let newArray = [one, two, three];
-    console.log(newArray);
     if (newArray.includes(0)) return;
     for (let i = 0; i < newArray.length; i++) {
       const gog = newArray.filter((item) => item === newArray[i]);
@@ -39,7 +38,7 @@ const Xo = ({ finish, setFinish, player, setPlayer }) => {
 
   const changeArr = (arr, stateArr) => {
     if (iterFunc(arr, stateArr)) setFinish(true);
-    if (!stateArr.includes(0)) {
+    else if(!stateArr.includes(0)) {
       setDraw(true);
       setMsg("Ничья!");
       setFinish(true);
@@ -57,7 +56,6 @@ const Xo = ({ finish, setFinish, player, setPlayer }) => {
       ];
       if (equalNum(...computed)) bool = true;
     }
-    console.log("ОТСЕЧКА");
     return bool;
   };
 
